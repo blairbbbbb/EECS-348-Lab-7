@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice2</title>
+    <style>
+        #paragraph {
+            border-style: solid;
+            border-width: 5px;
+            font-size: 18px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Practice 2: CSS Font Control</h1>
+
+    <div id="paragraph">
+        Hello, this is a summary of one of my favorite books, "Twilight" by Stephanie Meyers.
+        Twilight is about Bella Swan a 17 year old who moves back to her childhood town and meets a mysterious boy in her biology class. 
+        At first the boy, Edward Cullen, is very rude to her and acts like she smells awful.
+        However he is attractive to Bella starts to like him even though he acts weird. SPOILERS IF YOU READ AHEAD. 
+        Through a strange accident she figures out that Edward is actually a vampire that wants to eat her. 
+        Then for some reason they start dating dispite being an unlikely couple and get into serious trouble when other vamprie learn what is happening. 
+        Read the book to figure out if they stay together. 
+    </div>
+
+    Border R(0-255): <input type="text" id="borderRed" value=""> <br>
+    Border G(0-255): <input type="text" id="borderGreen" value=""> <br>
+    Border B(0-255): <input type="text" id="borderBlue" value=""> <br>
+    Border Width: <input type="text" id="borderThickness" value=""> <br>
+    Background R(0-255): <input type="text" id="backgroundRed" value=""> <br>
+    Background G(0-255): <input type="text" id="backgroundGreen" value=""> <br>
+    Background B(0-255): <input type="text" id="backgroundBlue" value=""> <br>
+    <button onclick="changeParagraphColor()">change the color !</button> <br>
+
+    <script type="text/javascript">
+        function validatePasswords() {
+            var password1 = document.getElementById("pass1").value;
+            var password2 = document.getElementById("pass2").value;
+
+            if (password1.length < 8) {
+                alert("The length of the first password is less than 8 letters!");
+            } else if (password2.length < 8) {
+                alert("The length of the second password is less than 8 letters!");
+            } else if (password1 != password2) {
+                alert("Two passwords don't match!");
+            } else {
+                alert("Everything is good!");
+            }
+        }
+
+
+        function changeParagraphColor() {
+            var borderRed = document.getElementById("borderRed").value;
+            var borderGreen = document.getElementById("borderGreen").value;
+            var borderBlue = document.getElementById("borderBlue").value;
+            var borderThickness = document.getElementById("borderThickness").value;
+            var backgroundRed = document.getElementById("backgroundRed").value;
+            var backgroundGreen = document.getElementById("backgroundGreen").value;
+            var backgroundBlue = document.getElementById("backgroundBlue").value;
+
+            var paragraph = document.getElementById("paragraph");
+            paragraph.style.borderColor = `rgb(${borderRed},${borderGreen},${borderBlue})`;
+            paragraph.style.borderWidth = borderThickness + "px"; 
+            paragraph.style.backgroundColor = `rgb(${backgroundRed},${backgroundGreen},${backgroundBlue})`;
+        }
+    </script>
+</body>
+</html>

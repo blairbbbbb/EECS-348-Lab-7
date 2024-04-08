@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <h1>Practice 3: JavaScript Password Verification</h1>
+        First Password: <input type="text" id="p1">
+        <br>
+        Second Password: <input type="text" id="p2">
+        <br>
+        <button onclick="check()">Verify</button>
+        <script>
+            function check() {
+                let p1 = document.getElementById('p1').value;
+                let p2 = document.getElementById('p2').value;
+                if (p1.length < 8 || p2.length < 8){
+                    alert("Both passwords must be longer than 8 characters!");
+                }
+                else if (p1 != p2){
+                    alert("Both passwords must be equal!");
+                }
+                else {
+                    alert("Everything is good!");
+                }
+            }
+        </script>
+    </body>
+</html>
